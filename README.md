@@ -61,9 +61,27 @@
 
 
 #  原型 20%
+###  产品架构图
+![产品架构图](https://images.gitee.com/uploads/images/2020/0110/130507_d399df22_1648172.png "屏幕截图.png")
+
 ###  原型1.交互及界面设计
+-  “首页”显示四大功能，点击不同的功能进入不同的功能页面
+![首页](https://images.gitee.com/uploads/images/2020/0110/122513_bf0bfe4f_1648172.png "屏幕截图.png")
 
+-  在“扫一扫”通过人工智能API——图像识别来识别图书的详细信息以及提供室内导航。
+![扫一扫流程](https://images.gitee.com/uploads/images/2020/0110/122934_236f60a3_1648172.png "屏幕截图.png")
 
+-  在“室内地图”通过地图api提供室内的导航，同时可自主搜索想搜索的区域
+![室内地图流程](https://images.gitee.com/uploads/images/2020/0110/123325_f4358a63_1648172.png "屏幕截图.png")
+
+-  在“服务设施”同样通过地图api提供室外的导航，可对服务设施类型进行筛选，然后选择。
+![服务设施流程](https://images.gitee.com/uploads/images/2020/0110/123735_f793b5a6_1648172.png "屏幕截图.png")
+###  原型2.信息设计
+-  在“智能问答”中运用人工智能API—语音智能交互（一句话识别），随后进行回答
+![智能问答流程](https://images.gitee.com/uploads/images/2020/0110/124238_aa9bf4b3_1648172.png "屏幕截图.png")
+
+###  原型3.原型文档
+[原型展示](http://nfunm095.gitee.io/library_prototype)
 
 #  API 产品使用关键AI或机器学习之API的输出入展示 15%
 
@@ -126,7 +144,7 @@ RATE = 16000;  # 固定值
 # 普通版
 
 DEV_PID = 1536;  # 1537 表示识别普通话，使用输入法模型。1536表示识别普通话，使用搜索模型。根据文档填写PID，选择语言及识别模型
-ASR_URL = 'http://vop.baidu.com/server_api'
+ASR_URL = '[http://vop.baidu.com/server_api](http://vop.baidu.com/server_api)'
 SCOPE = 'audio_voice_assistant_get'  # 有此scope表示有asr能力，没有请在网页里勾选，非常旧的应用可能没有
 
 #测试自训练平台需要打开以下信息， 自训练平台模型上线后，您会看见 第二步：“”获取专属模型参数pid:8001，modelid:1234”，按照这个信息获取 dev_pid=8001，lm_id=1234
@@ -136,7 +154,7 @@ SCOPE = 'audio_voice_assistant_get'  # 有此scope表示有asr能力，没有请
 # 极速版 打开注释的话请填写自己申请的appkey appSecret ，并在网页中开通极速版（开通后可能会收费）
 
 #DEV_PID = 80001
-#ASR_URL = 'http://vop.baidu.com/pro_api'
+#ASR_URL = '[http://vop.baidu.com/pro_api](http://vop.baidu.com/pro_api)'
 #SCOPE = 'brain_enhanced_asr'  # 有此scope表示有asr能力，没有请在网页里开通极速版
 
 # 忽略scope检查，非常旧的应用可能没有
@@ -151,7 +169,7 @@ class DemoError(Exception):
 
 """  TOKEN start """
 
-TOKEN_URL = 'http://openapi.baidu.com/oauth/2.0/token'
+TOKEN_URL = '[http://openapi.baidu.com/oauth/2.0/token](http://openapi.baidu.com/oauth/2.0/token)'
 
 
 def fetch_token():
@@ -239,7 +257,7 @@ if __name__ == '__main__':
 
 {'access_token': '24.da454ddfe5130c84fad9def39e4daad0.2592000.1581177593.282335-17543637', 'session_key': '9mzdX7uWO0Cz6TDVpB5MB9CKPrgZq+rffr76XfUbLbbAoufBo9CZMUBK/iB67KdmrdTLxpIz8kx56uJ04tZQXscgMQwJVw==', 'scope': 'audio_voice_assistant_get brain_enhanced_asr audio_tts_post public brain_all_scope picchain_test_picchain_api_scope wise_adapt lebo_resource_base lightservice_public hetu_basic lightcms_map_poi kaidian_kaidian ApsMisTest_Test权限 vis-classify_flower lpq_开放 cop_helloScope ApsMis_fangdi_permission smartapp_snsapi_base iop_autocar oauth_tp_app smartapp_smart_game_openapi oauth_sessionkey smartapp_swanid_verify smartapp_opensource_openapi smartapp_opensource_recapi fake_face_detect_开放Scope vis-ocr_虚拟人物助理 idl-video_虚拟人物助理', 'refresh_token': '25.798afc970f12210f89ce53efb00f6ca0.315360000.1893945593.282335-17543637', 'session_secret': '2dfbb02eb96a182fa679aede72a06cae', 'expires_in': 2592000}
 SUCCESS WITH TOKEN: 24.da454ddfe5130c84fad9def39e4daad0.2592000.1581177593.282335-17543637 ; EXPIRES IN SECONDS: 2592000
-url is http://vop.baidu.com/server_api?cuid=123456PYTHON&token=24.da454ddfe5130c84fad9def39e4daad0.2592000.1581177593.282335-17543637&dev_pid=1536
+url is [http://vop.baidu.com/server_api?cuid=123456PYTHON&token=24.da454ddfe5130c84fad9def39e4daad0.2592000.1581177593.282335-17543637&dev_pid=1536](http://vop.baidu.com/server_api?cuid=123456PYTHON&token=24.da454ddfe5130c84fad9def39e4daad0.2592000.1581177593.282335-17543637&dev_pid=1536)
 header is {'Content-Type': 'audio/pcm; rate=16000', 'Content-Length': 129600}
 Request time cost 2.417473
 {"corpus_no":"6779973501543636760","err_msg":"success.","err_no":0,"result":["北京科技馆"],"sn":"584903168781578585593"}
@@ -268,7 +286,7 @@ if 'COMPUTER_VISION_ENDPOINT' in os.environ:
 analyze_url = endpoint + "vision/v2.0/analyze"
 
 # Set image_url to the URL of an image that you want to analyze.
-image_url = "http://01.imgmini.eastday.com/mobile/20170914/" + \
+image_url = "[http://01.imgmini.eastday.com/mobile/20170914/](http://01.imgmini.eastday.com/mobile/20170914/)" + \
     "20170914080829_d5ea996cb6cdea63d5f8c18400ba1d37_4.jpeg"
 
 headers = {'Ocp-Apim-Subscription-Key': subscription_key}
@@ -297,24 +315,65 @@ plt.show()
 {"categories": [{"name": "people_group", "score": 0.4921875, "detail": {"celebrities": [{"name": "Kobe Bryant", "confidence": 0.997158408164978, "faceRectangle": {"left": 342, "top": 101, "width": 128, "height": 128}}]}}], "color": {"dominantColorForeground": "Brown", "dominantColorBackground": "White", "dominantColors": ["Yellow", "Brown", "White"], "accentColor": "C38108", "isBwImg": false, "isBWImg": false}, "description": {"tags": ["person", "man", "holding", "standing", "player", "posing", "hand", "wearing", "baseball", "people", "group", "woman", "old", "yellow", "young", "table", "ball", "kitchen", "dog", "white", "sign"], "captions": [{"text": "Kobe Bryant et al. posing for the camera", "confidence": 0.7172954442408799}]}, "requestId": "bc176499-48cf-411e-a9b3-3d1249439597", "metadata": {"width": 1080, "height": 1083, "format": "Jpeg"}}
 ```
 
+      
+##  API2.使用比较分析
+###  智能语音交互
+-  百度AI（规定次数内免费）
+1.支持多语言多音色：支持中文、英文、中英文混读合成，提供基础音库和精品音库共9种音库供您选择，让您的应用拥有个性化的声音。    
+
+2.丰富的场景应用：支持纯在线、在线离线融合两种应用方式，支持在弱网环境下的合成播报，满足不同的场景需求。    
+
+3.方便快捷的集成方式：提供REST API接口，方便可发起网络请求的设备进行合成；提供Android、iOS SDK，轻巧简便，便于手机、智能硬件快速集成。    
+
+-  阿里云（收费）
+1.听感自然：使用海量的音频数据训练合成数据，合成音真实饱满、抑扬顿挫、富有表现力，MOS评分达到业内顶级水准。   
+
+2.技术领先：技术上兼顾了多级韵律停顿，达到自然的合成韵律目的，综合利用声学参数和语言学参数，建立基于深度学习的多重自动预测模型。    
+
+-  腾讯云（收费）
+1.在线服务:可靠的在线服务，低延迟高并发，为语音合成效果保驾护航。    
+
+2.效果自然：语音合成效果流畅自然，近乎真人发声，极致体验。    
+
+总结:    
+总体来说，阿里云的优势在于技术比较领先，腾讯云百度AI提供的API优势在于听感良好，但在音色种类、场景应用和集成方式等方面百度AI提供的API占据着绝对的优势。    
+
+###  图像识别/文字识别
+-  百度AI（规定次数内免费）
+1.通用文字识别:对图片中的文字进行检测和识别，支持中、英、法、俄、西、葡、德、意、日、韩、中英混合等多语种识别，同时支持中、英、日、韩四语种的类型检测。    
+
+2.高精度版：在通用文字识别的基础上，提供更高精度的识别服务，并将字库从1w+扩展到2w+，能识别所有常用字和大部分生僻字。    
+
+3.含位置信息版：在通用文字识别的基础上，返回文字在图片中的位置信息，方便用户进行版式的二次处理。    
+
+4.高精度含位置版：在通用文字识别（高精度版）的基础上，返回文字在图片中的位置信息，方便用户进行版式的二次处理。    
+
+-  阿里云（收费）
+1.自动定位任意图片区域。    
+
+2.高准确率，高实时性，且支持海量数据。    
+
+-  腾讯云（收费）
+1.通用性强：产品优势 通用性强：不仅支持证照类图片，还支持多种复杂场景的文字识别，如街景门店、印刷图文等。    
+
+2.适应性强：适应各种实际应用中的异常情况，如光照不均、倾斜、模糊等，具备非常高的复杂环境可用性。    
+
+总结：    
+总体来说，阿里云的优势在于自动定位任意图片区域，腾讯云百度AI提供的API优势在于通用性和适应性强，但在精准度、位置信息和文字识别类别的广度等方面百度AI提供的API占据着绝对的优势。     
+
+##  API3.使用后风险报告
+###  智能语音交互API
+-  面临的挑战    
+总体来说，目前智能语音交互的技术没有达到最成熟化，偶尔还是会出现一些偏差，如语调和情感等的结合。    
+
+-  目前和未来发展性    
+智能语音交互目前在各个行业运用相对广泛，其作用也无可替代，在未来的很长时间都会产生巨大效应。    
+
+###  文本识别API
+-  面临的挑战    
+在目前文本识别还没有做到很高的准确率，特别是文字的亮度，曲度或清晰度不理想的情况下更为明显。    
+
+-  目前和未来发展性    
+文字识别技术诞生20余年来，经历从实验室技术到产品的转变，已经进入行业应用开发的成熟阶段。在未来随着文本识别的精确度不断上升此功能会变得更为重要。    
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-     
