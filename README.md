@@ -233,7 +233,7 @@ if __name__ == '__main__':
         of.write(result_str)
 ```
 
-语音智能交互的输出
+##  语音智能交互的输出
 ```
 
 {"access_token":"24.da454ddfe5130c84fad9def39e4daad0.2592000.1581177593.282335-17543637","session_key":"9mzdX7uWO0Cz6TDVpB5MB9CKPrgZq+rffr76XfUbLbbAoufBo9CZMUBK\/iB67KdmrdTLxpIz8kx56uJ04tZQXscgMQwJVw==","scope":"audio_voice_assistant_get brain_enhanced_asr audio_tts_post public brain_all_scope picchain_test_picchain_api_scope wise_adapt lebo_resource_base lightservice_public hetu_basic lightcms_map_poi kaidian_kaidian ApsMisTest_Test\u6743\u9650 vis-classify_flower lpq_\u5f00\u653e cop_helloScope ApsMis_fangdi_permission smartapp_snsapi_base iop_autocar oauth_tp_app smartapp_smart_game_openapi oauth_sessionkey smartapp_swanid_verify smartapp_opensource_openapi smartapp_opensource_recapi fake_face_detect_\u5f00\u653eScope vis-ocr_\u865a\u62df\u4eba\u7269\u52a9\u7406 idl-video_\u865a\u62df\u4eba\u7269\u52a9\u7406","refresh_token":"25.798afc970f12210f89ce53efb00f6ca0.315360000.1893945593.282335-17543637","session_secret":"2dfbb02eb96a182fa679aede72a06cae","expires_in":2592000}
@@ -246,7 +246,7 @@ Request time cost 2.417473
 {"corpus_no":"6779973501543636760","err_msg":"success.","err_no":0,"result":["北京科技馆"],"sn":"584903168781578585593"}
 ```
 
-图像识别的输入
+##  图像识别的输入
 ```
 import requests
 # If you are using a Jupyter notebook, uncomment the following line.
@@ -293,7 +293,7 @@ _ = plt.title(image_caption, size="x-large", y=-0.1)
 plt.show()
 ```
 
-图像识别的输出
+##  图像识别的输出
 ```
 {"categories": [{"name": "people_group", "score": 0.4921875, "detail": {"celebrities": [{"name": "Kobe Bryant", "confidence": 0.997158408164978, "faceRectangle": {"left": 342, "top": 101, "width": 128, "height": 128}}]}}], "color": {"dominantColorForeground": "Brown", "dominantColorBackground": "White", "dominantColors": ["Yellow", "Brown", "White"], "accentColor": "C38108", "isBwImg": false, "isBWImg": false}, "description": {"tags": ["person", "man", "holding", "standing", "player", "posing", "hand", "wearing", "baseball", "people", "group", "woman", "old", "yellow", "young", "table", "ball", "kitchen", "dog", "white", "sign"], "captions": [{"text": "Kobe Bryant et al. posing for the camera", "confidence": 0.7172954442408799}]}, "requestId": "bc176499-48cf-411e-a9b3-3d1249439597", "metadata": {"width": 1080, "height": 1083, "format": "Jpeg"}}
 ```
